@@ -8,6 +8,11 @@ body {
   background-color: #294e3d;
 }
 
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
 section {
   height: 100vh;
 }
@@ -25,6 +30,7 @@ section {
   color: white;
   padding: 0 72px;
   box-sizing: border-box; /* Include padding within total width */
+  z-index: 1;
 }
 
 .navbar .logo {
@@ -39,7 +45,7 @@ section {
   margin: 0; /* Removes default margin */
   display: flex;
   flex-direction: row;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -48,45 +54,51 @@ section {
 }
 
 .nav-list-item:hover {
-    font-weight: 500;
+  font-weight: 600;
 }
 
 /* ----- MENU ----- */
 .home {
- position: relative;
+  position: relative;
 }
 
 .duverseau {
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    bottom: -3vw;
-    color: white;
-    z-index: -1;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  bottom: -3vw;
+  color: white;
+  z-index: -1;
 }
 
 .duverseau p:nth-child(2) {
-    margin: 0;
-    font-size: 22.2vw;
-    font-style: italic;
+  margin: 0;
+  font-size: 22.2vw;
+  font-style: italic;
 }
 
 .jeremy {
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    transform: translateY(125%);
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  transform: translateY(125%);
 }
 
 .jeremy p {
-    font-size: 5vw;
-    margin: 0 20px;
-    font-style: italic;
-    font-weight: 500;
+  font-size: 5vw;
+  margin: 0 20px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ----- PROJETS ----- */
+
+section.projects {
+    /*background-color: white;*/
 }
 
 /* ----- FONT ----- */
