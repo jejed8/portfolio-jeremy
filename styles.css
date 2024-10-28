@@ -10,6 +10,7 @@ html {
 body {
   margin: 0;
   background-color: #294e3d;
+  cursor: none;
 }
 
 a {
@@ -23,6 +24,29 @@ section {
 
 section.preProjects {
   height: 5px;
+}
+
+/* ----- CUSTOM CURSOR ----- */
+
+#custom-cursor {
+  width: 48px; /* Adjust size as needed */
+  height: 48px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Avoid interfering with clicks */
+  background-image: url("./assets/images/cursor.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  mix-blend-mode: 'difference'; /* Blend mode */
+  transform: translate(-50%, -50%); /* Center on cursor */
+  z-index: 10000; /* Keep above other elements */
+  transition: mix-blend-mode 0.2s ease;
+}
+
+.element:hover ~ .cursor {
+  mix-blend-mode: color-dodge;
+  background-color: black;
 }
 
 /* ----- NAVBAR ----- */
@@ -117,7 +141,7 @@ section.preProjects {
 }
 
 .pWheel {
-    width: 100px;
+  width: 100px;
 }
 
 /* ----- PROJETS ----- */

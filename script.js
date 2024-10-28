@@ -1,5 +1,14 @@
 // ----- GSAP ----- //
 
+document.addEventListener("mousemove", (e) => {
+  const cursor = document.getElementById("custom-cursor");
+  cursor.style.top = `${e.clientY}px`;
+  cursor.style.left = `${e.clientX}px`;
+});
+
+
+// ----- GSAP ----- //
+
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
   // gsap code here!
@@ -47,3 +56,6 @@ document.querySelectorAll(".nav-list-item a").forEach((link) => {
     }
   });
 });
+
+
+
