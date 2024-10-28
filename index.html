@@ -21,17 +21,18 @@
 
 <body>
     <div class="navbar">
-        <div class="logo"><a>jrmy</a></div>
+        <a href="#home" class="logo">jrmy</a>
         <div>
             <ul class="nav-list">
-                <li class="nav-list-item"><a href="#">Accueil</a></li>
-                <li class="nav-list-item"><a href="#">Projets</a></li>
-                <li class="nav-list-item"><a href="#">Contact</a></li>
+                <li class="nav-list-item"><a href="#about">À Propos</a></li>
+                <li class="nav-list-item"><a href="#preProjects">Projets</a></li>
+                <li class="nav-list-item"><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
 
-    <section class="home">
+    <section id="home" class="home">
+        <!--<img classe="pWheel" src="./assets/images/p24.png">-->
         <div class="duverseau">
             <div class="jeremy">
                 <p>jeremy</p>
@@ -40,7 +41,10 @@
         </div>
     </section>
 
-    <section class="projects">
+    <section id="about" class="about"></section>
+    <section id="preProjects" class="preProjects"></section>
+
+    <section id="projects" class="projects">
         <div class="projects-content">
             <div class="item">
                 <a class="item-card aurorae" href="#">
@@ -122,7 +126,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">allo</section>
+    <section id="contact" class="contact">allo</section>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>

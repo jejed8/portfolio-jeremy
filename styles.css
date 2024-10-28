@@ -3,6 +3,10 @@
   font-optical-sizing: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #294e3d;
@@ -15,6 +19,10 @@ a {
 
 section {
   height: 100vh;
+}
+
+section.preProjects {
+  height: 5px;
 }
 
 /* ----- NAVBAR ----- */
@@ -50,14 +58,26 @@ section {
 }
 
 .nav-list-item {
-  padding-left: 60px;
+  position: relative;
+  margin-left: 60px;
 }
 
-.nav-list-item:hover {
-  font-weight: 600;
+.nav-list-item::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
 }
 
-/* ----- MENU ----- */
+.nav-list-item:hover::after {
+  width: 100%;
+}
+
+/* ----- ACCUEIL ----- */
 .home {
   position: relative;
   overflow: hidden;
@@ -94,6 +114,10 @@ section {
   margin: 0 20px;
   font-style: italic;
   font-weight: 500;
+}
+
+.pWheel {
+    width: 100px;
 }
 
 /* ----- PROJETS ----- */
@@ -139,7 +163,7 @@ section.projects {
 }
 
 .item-card:nth-child(even) {
-    flex-direction: row-reverse; /* Reverse the order for even cards */
+  flex-direction: row-reverse; /* Reverse the order for even cards */
 }
 
 .thumbnail {
@@ -178,22 +202,22 @@ section.projects {
   font-size: 36px;
 }
 .text .title h3 {
-    text-align: left; 
+  text-align: left;
 }
 .item-card:nth-child(even) .title h3 {
-    text-align: right;
+  text-align: right;
 }
 
 .item-card:nth-child(even) .text {
-    align-items: flex-end; 
+  align-items: flex-end;
 }
 .item-card:nth-child(odd) .text {
-    align-items: flex-start; 
+  align-items: flex-start;
 }
 
 .thumbnail img {
   height: 100%;
-  width: 100%; 
+  width: 100%;
   object-fit: cover;
   filter: grayscale(100%);
   z-index: 1;
