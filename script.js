@@ -55,3 +55,22 @@ document.querySelectorAll(".nav-list-item a").forEach((link) => {
     }
   });
 });
+
+// ----- Copy email ----- //
+
+const email = "jejeduverseau@gmail.com"; // Replace with your actual email address
+
+function copyEmail() {
+  navigator.clipboard
+    .writeText(email)
+    .then(() => {
+      //alert("Email copied to clipboard: " + email);
+    })
+    .catch((err) => {
+      console.error("Could not copy email: ", err);
+    });
+}
+
+function openMail() {
+  window.location.href = "mailto:" + email;
+}
