@@ -6,7 +6,6 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.left = `${e.clientX}px`;
 });
 
-
 // ----- GSAP ----- //
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -56,6 +55,3 @@ document.querySelectorAll(".nav-list-item a").forEach((link) => {
     }
   });
 });
-
-
-

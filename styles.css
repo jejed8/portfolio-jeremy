@@ -11,6 +11,7 @@ body {
   margin: 0;
   background-color: #294e3d;
   cursor: none;
+  overflow-x: hidden;
 }
 
 a {
@@ -29,18 +30,18 @@ section.preProjects {
 /* ----- CUSTOM CURSOR ----- */
 
 #custom-cursor {
-  width: 48px; 
+  width: 48px;
   height: 48px;
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none; 
+  pointer-events: none;
   background-image: url("./assets/images/cursor.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  mix-blend-mode: 'difference'; 
-  transform: translate(-50%, -50%); 
-  z-index: 10000; 
+  mix-blend-mode: "difference";
+  transform: translate(-50%, -50%);
+  z-index: 10000;
   transition: mix-blend-mode 0.2s ease;
 }
 
@@ -61,7 +62,7 @@ section.preProjects {
   background-color: #294e3d;
   color: white;
   padding: 0 72px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   z-index: 1;
 }
 
@@ -72,9 +73,9 @@ section.preProjects {
 }
 
 .nav-list {
-  list-style-type: none; 
-  padding: 0; 
-  margin: 0; 
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: row;
   font-weight: 500;
@@ -105,15 +106,20 @@ section.preProjects {
 .home {
   position: relative;
   overflow: hidden;
+  padding: 0 72px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  bottom: 0px;
 }
 
 .duverseau {
-  position: absolute;
+  position: relative;
   bottom: 0;
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
   bottom: -3vw;
   color: white;
@@ -122,7 +128,7 @@ section.preProjects {
 
 .duverseau p:nth-child(2) {
   margin: 0;
-  font-size: 22.2vw;
+  font-size: 20vw;
   font-style: italic;
 }
 
@@ -144,6 +150,138 @@ section.preProjects {
   width: 100px;
 }
 
+/* ----- A PROPOS ----- */
+section.about {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-container {
+  width: 100%;
+  padding: 72px;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bloc-1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 16px;
+  justify-content: center;
+}
+
+.bloc-1 p {
+  font-size: 48px;
+  color: white;
+  margin: 0;
+  margin-bottom: 64px;
+}
+
+.bloc-1 button {
+  color: #294e3d;
+  background-color: white;
+  padding: 12px 20px;
+  border: solid white;
+  border-radius: 8px;
+  font-size: 36px;
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.bloc-1 button:hover {
+  color: white;
+  background-color: #294e3d; 
+  transform: scale(1.05); 
+}
+
+
+.bloc-2 {
+  max-width: 500px;
+  max-height: 500px;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.img-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  top: 0;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.image:hover {
+  filter: grayscale(0%);
+}
+
+.text-emphasis {
+  font-weight: 700;
+}
+
+section.skills {
+  height: 15vh;
+  background-color: #234334;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.carousel {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  height: 100px; /* Can adjust based on desired carousel height */
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-item {
+  height: 64px; /* Max height for each logo */
+  width: auto;
+  padding: 0 10px;
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.carousel-item:hover {
+  transform: scale(1.1); /* Slight growth on hover */
+}
+
+@keyframes scroll {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+
+.carousel-track img {
+  height: 64px;
+  padding-left: 50px;
+}
+
 /* ----- PROJETS ----- */
 
 section.projects {
@@ -158,7 +296,7 @@ section.projects {
 }
 
 .item {
-  flex: 0 0 33.33%; 
+  flex: 0 0 33.33%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -168,11 +306,11 @@ section.projects {
   color: white;
   font-size: 2em;
   padding: 60px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .item:last-child {
-  border-right: none; 
+  border-right: none;
 }
 
 .item-card:hover {
@@ -182,12 +320,12 @@ section.projects {
 .item-card {
   width: 100%;
   height: 45%;
-  display: flex; 
+  display: flex;
   transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
 .item-card:nth-child(even) {
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
 }
 
 .thumbnail {
@@ -197,7 +335,7 @@ section.projects {
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  width: 50%; 
+  width: 50%;
 }
 
 .text {
@@ -205,7 +343,7 @@ section.projects {
   flex-direction: column;
   justify-content: space-between;
   align-items: left;
-  width: 50%; 
+  width: 50%;
   padding: 0px 20px;
 }
 
@@ -349,9 +487,6 @@ section.footer {
 .up-icon {
   font-size: 24px;
 }
-
-
-
 
 .card-section {
   width: 100%;
