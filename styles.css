@@ -110,10 +110,45 @@ section.preProjects {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  bottom: 0px;
+  justify-content: flex-end;
+  height: 100vh;
 }
 
+.home-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.home-container p {
+  width: 100%; /* Ensure it takes the full width of the container */
+  text-align: justify; /* Justify the text */
+  font-size: 16vw;
+  margin: 0;
+  color: white;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.jeremy p {
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: lowercase;
+  text-align: justify;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 2%;
+  box-sizing: border-box;
+  transform: translateY(50%);
+}
+
+
+
+/*
 .duverseau {
   position: relative;
   bottom: 0;
@@ -149,10 +184,12 @@ section.preProjects {
 .pWheel {
   width: 100px;
 }
+  */
 
 /* ----- A PROPOS ----- */
+
 section.about {
-  height: 70vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,10 +235,9 @@ section.about {
 
 .bloc-1 button:hover {
   color: white;
-  background-color: #294e3d; 
-  transform: scale(1.05); 
+  background-color: #294e3d;
+  transform: scale(1.05);
 }
-
 
 .bloc-2 {
   max-width: 500px;
@@ -234,6 +270,8 @@ section.about {
 .text-emphasis {
   font-weight: 700;
 }
+
+/* ----- SKILLS ----- */
 
 section.skills {
   height: 15vh;
@@ -269,13 +307,12 @@ section.skills {
 
 @keyframes scroll {
   from {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   to {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
-
 
 .carousel-track img {
   height: 64px;
