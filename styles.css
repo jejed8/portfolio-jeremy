@@ -536,7 +536,7 @@ section.footer {
 }
 
 .linkUp {
-  width: 200px;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   grid-area: 1 / 3 / 2 / 5;
@@ -653,6 +653,165 @@ section.footer {
   .thumbnail {
     width: 40%;
   }
+
+  .project-page .navbar .logo::before {
+    content: "\21A9";
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    padding-right: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-shadow: 0px 0px 6px rgba(49, 49, 49, 0.81);
+  }
+}
+
+/* ----- PROJECT PAGE ----- */
+section.hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0%;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  height: 25vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.project-title {
+  font-size: 56px;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: first baseline;
+}
+
+.year {
+  font-size: 56px;
+  margin: 0;
+}
+
+section.presentation {
+  padding: 2% 10%;
+  padding-right: 10%;
+  color: white;
+  height: auto;
+  padding-bottom: 10%;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: left;
+  margin-bottom: 48px;
+}
+
+.description span {
+  font-weight: 800;
+}
+
+.description p:nth-child(2) {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 48px;
+  padding: 12px 0;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio (9/16 = 0.5625 or 56.25%) */
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin-bottom: 96px;
+}
+
+.video-desc {
+  font-size: 20px;
+}
+
+.preprod {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.preprod p {
+  text-align: left;
+}
+
+.preprod h2 {
+  font-size: 32px;
+}
+
+.preprod h3 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.preprod a {
+  position: relative;
+  text-decoration: underline;
+  color: inherit;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.preprod a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.preprod a:hover::after {
+  width: 100%;
+}
+
+.preprod span {
+  font-weight: 800;
+}
+
+section.credits {
+  height: auto;
+  padding: 2% 10%;
+  color: #1a1a1a;
+  background-color: white;
+  padding-bottom: 8%;
+}
+
+.credits h2 {
+  font-size: 32px;
+}
+
+.credits h3 {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 /* ----- DESKTOP STYLES (769px and above) ----- */
@@ -1186,8 +1345,21 @@ section.footer {
   .credits h2 {
     font-size: 48px;
   }
+
   .credits h3 {
     font-size: 20px;
+  }
+
+  .project-page .navbar .logo::before {
+    content: "Retour";
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    padding-right: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-shadow: 0px 0px 6px rgba(49, 49, 49, 0.81);
   }
 
 }
