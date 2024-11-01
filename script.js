@@ -1,9 +1,70 @@
-// ----- GSAP ----- //
+// ----- Cursor ----- //
 
 document.addEventListener("mousemove", (e) => {
   const cursor = document.getElementById("custom-cursor");
   cursor.style.top = `${e.clientY}px`;
   cursor.style.left = `${e.clientX}px`;
+});
+
+// Function to handle cursor visibility based on window size
+function handleCursorVisibility() {
+  const cursor = document.getElementById("custom-cursor");
+
+  if (window.innerWidth <= 768) {
+    // Adjust the breakpoint as needed
+    // Remove the mousemove event listener
+    document.removeEventListener("mousemove", updateCursor);
+    cursor.style.display = "none"; // Hide the custom cursor
+  } else {
+    // Add the mousemove event listener
+    document.addEventListener("mousemove", updateCursor);
+    cursor.style.display = "block"; // Show the custom cursor
+  }
+}
+
+// Function to update cursor position
+function updateCursor(e) {
+  const cursor = document.getElementById("custom-cursor");
+  cursor.style.top = `${e.clientY}px`;
+  cursor.style.left = `${e.clientX}px`;
+}
+
+// Add the event listener for resizing
+window.addEventListener("resize", handleCursorVisibility);
+
+// Initial call to set cursor visibility
+handleCursorVisibility();
+
+document.querySelectorAll(".contact-container a").forEach((link) => {
+  link.addEventListener("mouseenter", () => {
+    const cursor = document.getElementById("custom-cursor");
+    cursor.classList.add("hover");
+  });
+
+  link.addEventListener("mouseleave", () => {
+    const cursor = document.getElementById("custom-cursor");
+    cursor.classList.remove("hover");
+  });
+});
+
+document.querySelectorAll(".item a, .bloc-1 a").forEach((link) => {
+  link.addEventListener("mouseenter", () => {
+    const cursor = document.getElementById("custom-cursor");
+    cursor.classList.add("item-hover");
+  });
+
+  link.addEventListener("mouseleave", () => {
+    const cursor = document.getElementById("custom-cursor");
+    cursor.classList.remove("item-hover");
+  });
+});
+
+// ----- Navbar Toggle ----- //
+const mobileMenu = document.getElementById("mobile-menu");
+const navList = document.getElementById("nav-list");
+
+mobileMenu.addEventListener("click", () => {
+  navList.classList.toggle("show");
 });
 
 // ----- GSAP ----- //
@@ -28,6 +89,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
   });
 });
+
+// ----- Navbar Toggle ----- //
 
 // ----- Smooth scroll ----- //
 
@@ -58,7 +121,7 @@ document.querySelectorAll(".nav-list-item a").forEach((link) => {
 
 // ----- Copy email ----- //
 
-const email = "jejeduverseau@gmail.com"; // Replace with your actual email address
+const email = "jejeduverseau@gmail.com";
 
 function copyEmail() {
   navigator.clipboard

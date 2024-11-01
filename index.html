@@ -21,10 +21,12 @@
 
 <body>
     <div id="custom-cursor"></div>
+    <!------- NAVBAR ------->
     <div class="navbar">
         <a href="#home" class="logo">jrmy</a>
-        <div>
-            <ul class="nav-list">
+        <div class="menu-toggle" id="mobile-menu">&plus;</div>
+        <div class="nav-list" id="nav-list">
+            <ul>
                 <li class="nav-list-item"><a href="#about">À Propos</a></li>
                 <li class="nav-list-item"><a href="#preProjects">Projets</a></li>
                 <li class="nav-list-item"><a href="#contact">Contact</a></li>
@@ -32,8 +34,9 @@
         </div>
     </div>
 
+
     <section id="home" class="home">
-        <!--<img classe="pWheel" src="./assets/images/p24.png">-->
+       <div class="p-wheel"><img src="./assets/images/p24-wheel.svg"></div>
         <div class="home-container">
             <div class="name-container">
                 <div class="jeremy">
@@ -164,9 +167,89 @@
             </div>
         </div>
     </section>
+
+    <section id="projects-mobile" class="projects-mobile">
+        <div class="projects-mobile-content">
+            <a class="item-card aurorae" href="#">
+                <div class="thumbnail"><img src="./assets/images/aurorae.png"></div>
+                <div class="text-mobile">
+                    <div class="title">
+                        <h2>Aurorae</h2>
+                        <h3>2023</h3>
+                    </div>
+                    <div class="type">
+                        <h4>Vidéo</h4>
+                    </div>
+                </div>
+            </a>
+            <a class="item-card comfortDore" href="#">
+                <div class="thumbnail"><img src="./assets/images/comfortDore.png"></div>
+                <div class="text-mobile">
+                    <div class="title">
+                        <h2>Comfort Doré</h2>
+                        <h3>2023</h3>
+                    </div>
+                    <div class="type">
+                        <h4>Vidéo</h4>
+                    </div>
+                </div>
+            </a>
+            <a class="item-card fractalPt1" href="#">
+                <div class="thumbnail"><img src="./assets/images/fractalPt1.png"></div>
+                <div class="text-mobile">
+                    <div class="title">
+                        <h2>Fractal Pt.1</h2>
+                        <h3>2024</h3>
+                    </div>
+                    <div class="type">
+                        <h4>Animation 3D</h4>
+                    </div>
+                </div>
+            </a>
+            <a class="item-card tictac" href="#">
+                <div class="thumbnail"><img src="./assets/images/tictac.png"></div>
+                <div class="text-mobile">
+                    <div class="title">
+                        <h2>Tic Tac</h2>
+                        <h3>2023</h3>
+                    </div>
+                    <div class="type">
+                        <h4>Vidéo</h4>
+                    </div>
+                </div>
+            </a>
+            <a class="item-card artFutura" href="#">
+                <div class="thumbnail"><img src="./assets/images/artFutura.png"></div>
+                <div class="text-mobile">
+                    <div class="title">
+                        <h2>Art Futura</h2>
+                        <h3>2024</h3>
+                    </div>
+                    <div class="type">
+                        <h4>Design WEB</h4>
+                    </div>
+                </div>
+            </a>
+            <a class="item-card crystalis" href="#">
+                <div class="thumbnail"><img src="./assets/images/crystalis.png"></div>
+                <div class="text-mobile">
+                    <div class="title">
+                        <h2>Crystalis</h2>
+                        <h3>2023</h3>
+                    </div>
+                    <div class="type">
+                        <h4>Modélisation 3D</h4>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+
     <section id="contact" class="contact">
         <div class="contact-container">
-            <a href="href="#" onclick="copyEmail(); openMail(); return false;">Contactez-moi!</a>
+            <a href="href=" #" onclick="copyEmail(); openMail(); return false;">Contactez-moi!</a>
         </div>
     </section>
     <section class="footer">
