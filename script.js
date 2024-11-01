@@ -59,6 +59,21 @@ document.querySelectorAll(".item a, .bloc-1 a").forEach((link) => {
   });
 });
 
+// ---- PROJECT PAGE CUSTOM CURSOR ---- //
+
+document.querySelectorAll('.preprod a').forEach((link) => {
+  link.addEventListener('mouseenter', () => {
+    const cursor = document.getElementById('custom-cursor');
+    cursor.classList.add('item-hover'); // Use 'item-hover' or another class if you want a specific cursor change
+  });
+
+  link.addEventListener('mouseleave', () => {
+    const cursor = document.getElementById('custom-cursor');
+    cursor.classList.remove('item-hover');
+  });
+});
+
+
 // ----- Navbar Toggle ----- //
 const mobileMenu = document.getElementById("mobile-menu");
 const navList = document.getElementById("nav-list");
@@ -88,6 +103,36 @@ document.addEventListener("DOMContentLoaded", (event) => {
       anticipatePin: 1,
     },
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate the .poster-info section to slide over the .hero section
+  gsap.to(".poster-info", {
+    y: -200, // Adjust this value as needed for the sliding distance
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".poster-info",
+      start: "top top", // Animation starts when .hero reaches the top of the viewport
+      end: "bottom top", // Animation ends when .hero leaves the viewport at the top
+      scrub: true, // Smooth scroll-based animation
+      duration: 3,
+      y: '-200%',
+    },
+  });
+
+  gsap.to(".hero", {
+    y: 200,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+      duration: 3,
+    }
+  })
 });
 
 // ----- Navbar Toggle ----- //
